@@ -304,13 +304,16 @@ namespace QuanLyBanHang.Forms
                         {
                             foreach (DataRow r in table.Rows)
                             {
-                                var lspid = context.LoaiSanPham.FirstOrDefault(r=>r.TenLoai== r["LoaiSanPham"].ToString());
+                                string loai = r["LoaiSanPham"].ToString();
+                                string hsx_ = r["HangSanXuat"].ToString();
+                                var lsp = context.LoaiSanPham.FirstOrDefault(r => r.TenLoai == loai);
+                                var hsx = context.HangSanXuat.FirstOrDefault(r => r.TenHangSanXuat == hsx_);
                                 SanPham sp = new SanPham();
-                                sp.LoaiSanPhamID = Convert.ToInt32(r["LoaiSanPhamID"]);
-                                sp.HangSanXuatID = Convert.ToInt32(r["HangsanXuatID"]);
+                                sp.LoaiSanPhamID = lsp.ID;
+                                sp.HangSanXuatID = hsx.ID;
                                 sp.TenSanPham = r["TenSanPham"].ToString();
-                                sp.SoLuong = Convert.ToInt32(r["SoLuong"]);
                                 sp.DonGia = Convert.ToInt32(r["DonGia"]);
+                                sp.SoLuong = Convert.ToInt32(r["SoLuong"]);
                                 sp.HinhAnh = r["HinhAnh"].ToString();
                                 context.SanPham.Add(sp);
                             }
@@ -349,12 +352,16 @@ namespace QuanLyBanHang.Forms
                         new DataColumn("TenSanPham", typeof(string)),
                         new DataColumn("DonGia", typeof(int)),
                         new DataColumn("SoLuong", typeof(int)),
-                        new DataColumn("HinhAnh", typeof(int))});
+                        new DataColumn("HinhAnh", typeof(string))});
                     var sanPham = context.SanPham.ToList();
                     if (sanPham != null)
                     {
                         foreach (var p in sanPham)
-                            table.Rows.Add(p.ID, p.HoVaTen, p.DienThoai, p.DiaChi, p.TenDangNhap, p.QuyenHan);
+                        {
+                            var lsp = context.LoaiSanPham.FirstOrDefault(r => r.ID==p.LoaiSanPhamID);
+                            var hsx = context.HangSanXuat.FirstOrDefault(r => r.ID==p.HangSanXuatID);
+                            table.Rows.Add(p.ID, lsp.TenLoai, hsx.TenHangSanXuat, p.TenSanPham, p.DonGia, p.SoLuong, p.HinhAnh);
+                        }
                     }
                     using (XLWorkbook wb = new XLWorkbook())
                     {
@@ -369,5 +376,6 @@ namespace QuanLyBanHang.Forms
                     MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
+        }
     }
 }

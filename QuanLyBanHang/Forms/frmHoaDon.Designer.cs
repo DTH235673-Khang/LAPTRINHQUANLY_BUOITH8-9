@@ -46,6 +46,7 @@
             btnThoat = new Button();
             btnTimKiem = new Button();
             btnXuat = new Button();
+            btnNhap = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
@@ -123,7 +124,7 @@
             // 
             btnLapHoaDon.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLapHoaDon.ForeColor = Color.Blue;
-            btnLapHoaDon.Location = new Point(105, 257);
+            btnLapHoaDon.Location = new Point(76, 258);
             btnLapHoaDon.Name = "btnLapHoaDon";
             btnLapHoaDon.Size = new Size(148, 28);
             btnLapHoaDon.TabIndex = 1;
@@ -135,7 +136,7 @@
             // 
             btnInHoaDon.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnInHoaDon.ForeColor = Color.Black;
-            btnInHoaDon.Location = new Point(259, 257);
+            btnInHoaDon.Location = new Point(230, 258);
             btnInHoaDon.Name = "btnInHoaDon";
             btnInHoaDon.Size = new Size(107, 28);
             btnInHoaDon.TabIndex = 2;
@@ -146,7 +147,7 @@
             // 
             btnSua.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSua.ForeColor = Color.Black;
-            btnSua.Location = new Point(372, 257);
+            btnSua.Location = new Point(343, 258);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(72, 28);
             btnSua.TabIndex = 3;
@@ -158,7 +159,7 @@
             // 
             btnXoa.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnXoa.ForeColor = Color.Red;
-            btnXoa.Location = new Point(450, 257);
+            btnXoa.Location = new Point(421, 258);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(65, 28);
             btnXoa.TabIndex = 4;
@@ -170,18 +171,19 @@
             // 
             btnThoat.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnThoat.ForeColor = Color.Black;
-            btnThoat.Location = new Point(521, 257);
+            btnThoat.Location = new Point(492, 258);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(72, 28);
             btnThoat.TabIndex = 5;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
             // btnTimKiem
             // 
             btnTimKiem.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnTimKiem.ForeColor = Color.Black;
-            btnTimKiem.Location = new Point(599, 257);
+            btnTimKiem.Location = new Point(570, 258);
             btnTimKiem.Name = "btnTimKiem";
             btnTimKiem.Size = new Size(106, 28);
             btnTimKiem.TabIndex = 6;
@@ -192,18 +194,31 @@
             // 
             btnXuat.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnXuat.ForeColor = Color.Black;
-            btnXuat.Location = new Point(711, 257);
+            btnXuat.Location = new Point(682, 258);
             btnXuat.Name = "btnXuat";
             btnXuat.Size = new Size(117, 28);
             btnXuat.TabIndex = 7;
             btnXuat.Text = "Xuất Excel...";
             btnXuat.UseVisualStyleBackColor = true;
             // 
+            // btnNhap
+            // 
+            btnNhap.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnNhap.ForeColor = Color.Black;
+            btnNhap.Location = new Point(805, 258);
+            btnNhap.Name = "btnNhap";
+            btnNhap.Size = new Size(117, 28);
+            btnNhap.TabIndex = 8;
+            btnNhap.Text = "Nhập";
+            btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnNhap_Click;
+            // 
             // frmHoaDon
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(990, 307);
+            Controls.Add(btnNhap);
             Controls.Add(btnXuat);
             Controls.Add(btnTimKiem);
             Controls.Add(btnThoat);
@@ -237,5 +252,6 @@
         private Button btnThoat;
         private Button btnTimKiem;
         private Button btnXuat;
+        private Button btnNhap;
     }
 }
