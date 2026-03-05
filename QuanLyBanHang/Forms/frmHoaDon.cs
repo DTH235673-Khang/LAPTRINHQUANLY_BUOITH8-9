@@ -103,10 +103,11 @@ namespace QuanLyBanHang.Forms
                     DataTable table = new DataTable();
                     using (XLWorkbook workbook = new XLWorkbook(openFileDialog.FileName))
                     {
-                        IXLWorksheet worksheet = workbook.Worksheet(1);
+                        IXLWorksheet worksheet1 = workbook.Worksheet(1);
+                        IXLWorksheet worksheet2 = workbook.Worksheet(1);
                         bool firstRow = true;
                         string readRange = "1:1";
-                        foreach (IXLRow row in worksheet.RowsUsed())
+                        foreach (IXLRow row in worksheet1.RowsUsed())
                         {
                             // Đọc dòng tiêu đề (dòng đầu tiên)
                             if (firstRow)
