@@ -1,6 +1,6 @@
 ﻿namespace QuanLyBanHang.Reports
 {
-    partial class frmThongKeSanPham
+    partial class frmThongKeDoanhThu
     {
         /// <summary>
         /// Required designer variable.
@@ -37,20 +37,18 @@
             reportViewer.Location = new Point(0, 0);
             reportViewer.Name = "reportViewer";
             reportViewer.ServerReport.BearerToken = null;
-            reportViewer.Size = new Size(914, 600);
+            reportViewer.Size = new Size(800, 450);
             reportViewer.TabIndex = 0;
             // 
-            // frmThongKeSanPham
+            // frmThongKeDoanhThu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(800, 450);
             Controls.Add(reportViewer);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "frmThongKeSanPham";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Thống kê sản phẩm";
-            Load += frmThongKeSanPham_Load;
+            Name = "frmThongKeDoanhThu";
+            Text = "Thống kê doanh thu";
+            Load += frmThongKeDoanhThu_Load;
             ResumeLayout(false);
         }
 

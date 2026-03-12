@@ -1,4 +1,5 @@
 ﻿using QuanLyBanHang.Data;
+using QuanLyBanHang.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,7 @@ namespace QuanLyBanHang.Forms
             ChuaDangNhap();
             DangNhap();
         }
+      
 
         private void mnuLoaiSanPham_Click(object sender, EventArgs e)
         {
@@ -41,9 +43,9 @@ namespace QuanLyBanHang.Forms
             {
                 loaiSanPham = new frmLoaiSanPham();
                 loaiSanPham.MdiParent = this;
+                loaiSanPham.TopLevel = false;
                 loaiSanPham.FormBorderStyle = FormBorderStyle.None;
                 loaiSanPham.Dock = DockStyle.Fill;
-
                 loaiSanPham.Show();
             }
             else
@@ -58,7 +60,7 @@ namespace QuanLyBanHang.Forms
                 hangSanXuat.MdiParent = this;
                 hangSanXuat.FormBorderStyle = FormBorderStyle.None;
                 hangSanXuat.Dock = DockStyle.Fill;
-
+              
                 hangSanXuat.Show();
             }
             else
@@ -87,7 +89,7 @@ namespace QuanLyBanHang.Forms
                 khachHang.MdiParent = this;
                 khachHang.FormBorderStyle = FormBorderStyle.None;
                 khachHang.Dock = DockStyle.Fill;
-
+               
                 khachHang.Show();
             }
             else
@@ -102,7 +104,7 @@ namespace QuanLyBanHang.Forms
                 nhanVien.MdiParent = this;
                 nhanVien.FormBorderStyle = FormBorderStyle.None;
                 nhanVien.Dock = DockStyle.Fill;
-
+               
                 nhanVien.Show();
             }
             else
@@ -117,7 +119,7 @@ namespace QuanLyBanHang.Forms
                 hoaDon.MdiParent = this;
                 hoaDon.FormBorderStyle = FormBorderStyle.None;
                 hoaDon.Dock = DockStyle.Fill;
-
+               
                 hoaDon.Show();
             }
             else
@@ -252,6 +254,28 @@ namespace QuanLyBanHang.Forms
                 child.Close();
             }
             ChuaDangNhap();
+        }
+
+        private void mnuThongKeSanPham_Click(object sender, EventArgs e)
+        {
+            frmThongKeSanPham tksp = new frmThongKeSanPham();
+            tksp.MdiParent = this;
+            tksp.FormBorderStyle = FormBorderStyle.None;
+            tksp.Dock = DockStyle.Fill;
+
+            tksp.Show();
+
+        }
+
+        private void mnuThongKeDoanhThu_Click(object sender, EventArgs e)
+        {
+            frmThongKeDoanhThu tkdt = new frmThongKeDoanhThu();
+            tkdt.MdiParent = this;
+            tkdt.FormBorderStyle = FormBorderStyle.None;
+            tkdt.Dock = DockStyle.Fill;
+
+            tkdt.Show();
+
         }
     }
 

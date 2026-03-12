@@ -12,12 +12,10 @@ namespace QuanLyBanHang.Reports
     {
         QLBHDbContext context = new QLBHDbContext();
         QLBHDataSet.DanhSachSanPhamDataTable danhSachSanPhamDataTable = new QLBHDataSet.DanhSachSanPhamDataTable();
-        string reportsFolder = Application.StartupPath.Replace("bin\\Debug\\net5.0-windows", "Reports");
         public frmThongKeSanPham()
         {
             InitializeComponent();
         }
-
         private void frmThongKeSanPham_Load(object sender, EventArgs e)
         {
             var danhSachSanPham = context.SanPham.Select(r => new DanhSachSanPham
@@ -50,15 +48,13 @@ namespace QuanLyBanHang.Reports
             ReportDataSource reportDataSource = new ReportDataSource();
             reportDataSource.Name = "DanhSachSanPham";
             reportDataSource.Value = danhSachSanPhamDataTable;
-            /*reportViewer.LocalReport.DataSources.Clear();
+            reportViewer.LocalReport.DataSources.Clear();
             reportViewer.LocalReport.DataSources.Add(reportDataSource);
-            reportViewer.LocalReport.ReportPath = Path.Combine(reportsFolder, "rptThongKeSanPham.rdlc");
-            reportViewer.SetDisplayMode(DisplayMode.PrintLayout);
+            reportViewer.LocalReport.ReportPath = "Reports\\rptThongKeSanPham.rdlc";
+            reportViewer.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
             reportViewer.ZoomMode = ZoomMode.Percent;
             reportViewer.ZoomPercent = 100;
-            reportViewer.RefreshReport();*/
+            reportViewer.RefreshReport();
         }
     }
 }
-    
-
