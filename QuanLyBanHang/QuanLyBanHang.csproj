@@ -32,7 +32,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.12" />
     <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms" Version="150.1652.0" />
-    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.33" />
   </ItemGroup>
 
   <ItemGroup>
