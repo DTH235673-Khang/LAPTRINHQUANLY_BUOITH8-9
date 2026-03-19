@@ -43,6 +43,7 @@
             txtTenHangSanXuat = new TextBox();
             label1 = new Label();
             groupBox2 = new GroupBox();
+            helpProvider1 = new HelpProvider();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -168,8 +169,10 @@
             // 
             // btnThem
             // 
+            helpProvider1.SetHelpNavigator(btnThem, HelpNavigator.Topic);
             btnThem.Location = new Point(6, 56);
             btnThem.Name = "btnThem";
+            helpProvider1.SetShowHelp(btnThem, true);
             btnThem.Size = new Size(75, 23);
             btnThem.TabIndex = 2;
             btnThem.Text = "Thêm";
@@ -203,6 +206,10 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Danh sách hãng sản xuất";
             // 
+            // helpProvider1
+            // 
+            helpProvider1.HelpNamespace = "nhanvien.html";
+            // 
             // frmHangSanXuat
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -210,6 +217,9 @@
             ClientSize = new Size(681, 415);
             Controls.Add(groupBox1);
             Controls.Add(groupBox2);
+            HelpButton = true;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmHangSanXuat";
             Text = "Hãng sản xuất";
             Load += frmHangSanXuat_Load;
@@ -237,5 +247,6 @@
         private GroupBox groupBox2;
         private Button btnXuat;
         private Button btnNhap;
+        private HelpProvider helpProvider1;
     }
 }

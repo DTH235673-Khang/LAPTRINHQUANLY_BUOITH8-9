@@ -58,6 +58,7 @@
             btnThem = new Button();
             txtHoVaTen = new TextBox();
             label1 = new Label();
+            helpProvider1 = new HelpProvider();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             groupBox1.SuspendLayout();
@@ -398,5 +399,6 @@
         private DataGridViewTextBoxColumn DiaChi;
         private DataGridViewTextBoxColumn TenDangNhap;
         private DataGridViewTextBoxColumn QuyenHan;
+        private HelpProvider helpProvider1;
     }
 }

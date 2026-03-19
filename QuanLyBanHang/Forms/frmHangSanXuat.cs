@@ -33,6 +33,8 @@ namespace QuanLyBanHang.Forms
 
         private void frmHangSanXuat_Load(object sender, EventArgs e)
         {
+            
+            
             BatTatChucNang(false);
             List<HangSanXuat> lsp = new List<HangSanXuat>();
             lsp = context.HangSanXuat.ToList();

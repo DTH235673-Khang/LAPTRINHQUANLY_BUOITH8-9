@@ -42,6 +42,8 @@ namespace QuanLyBanHang.Forms
         }
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
+            helpProvider1.HelpNamespace = "HuongDanSuDung/nhanvien.html";
+            helpProvider1.SetShowHelp(this, true);
             BatTatChucNang(false);
             dataGridView.AutoGenerateColumns = false;
             List<NhanVien> nv = new List<NhanVien>();

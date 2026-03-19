@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -73,6 +73,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="HuongDanSuDung\nhanvien.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Reports\QLBHDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>QLBHDataSet.Designer.cs</LastGenOutput>
