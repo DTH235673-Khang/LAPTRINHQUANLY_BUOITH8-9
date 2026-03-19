@@ -57,6 +57,7 @@
             label5 = new Label();
             cboSanPham = new ComboBox();
             label4 = new Label();
+            helpProvider1 = new HelpProvider();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -374,5 +375,6 @@
         private Button btnThoat;
         private Button btnInHoaDon;
         private Button btnLuuHoaDon;
+        private HelpProvider helpProvider1;
     }
 }

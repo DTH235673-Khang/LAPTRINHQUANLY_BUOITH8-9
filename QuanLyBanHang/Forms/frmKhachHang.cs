@@ -39,6 +39,8 @@ namespace QuanLyBanHang.Forms
 
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
+            helpProvider1.HelpNamespace = "HuongDanSuDung/nhanvien.html";
+            helpProvider1.SetShowHelp(this, true);
             BatTatChucNang(false);
             List<KhachHang> kh = new List<KhachHang>();
             kh = context.KhachHang.ToList();

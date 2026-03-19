@@ -50,6 +50,7 @@
             txtHoVaTen = new TextBox();
             label1 = new Label();
             groupBox2 = new GroupBox();
+            helpProvider1 = new HelpProvider();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -314,5 +315,6 @@
         private DataGridViewTextBoxColumn HoVaTen;
         private DataGridViewTextBoxColumn DienThoai;
         private DataGridViewTextBoxColumn DiaChi;
+        private HelpProvider helpProvider1;
     }
 }

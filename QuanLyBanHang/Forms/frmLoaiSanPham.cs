@@ -33,6 +33,8 @@ namespace QuanLyBanHang.Forms
 
         private void frmLoaiSanPham_Load(object sender, EventArgs e)
         {
+            helpProvider1.HelpNamespace = "HuongDanSuDung/nhanvien.html";
+            helpProvider1.SetShowHelp(this, true);
             BatTatChucNang(false);
             List<LoaiSanPham> lsp = new List<LoaiSanPham>();
             lsp = context.LoaiSanPham.ToList();

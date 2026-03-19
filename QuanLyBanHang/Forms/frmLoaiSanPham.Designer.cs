@@ -43,6 +43,7 @@
             dataGridView = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
             TenLoai = new DataGridViewTextBoxColumn();
+            helpProvider1 = new HelpProvider();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
@@ -237,5 +238,6 @@
         private DataGridViewTextBoxColumn TenLoai;
         private Button btnNhap;
         private Button btnXuat;
+        private HelpProvider helpProvider1;
     }
 }

@@ -25,6 +25,8 @@ namespace QuanLyBanHang.Forms
 
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
+            helpProvider1.HelpNamespace = "HuongDanSuDung/nhanvien.html";
+            helpProvider1.SetShowHelp(this, true);
             dataGridView.AutoGenerateColumns = false;
             List<DanhSachHoaDon> hd = new List<DanhSachHoaDon>();
             hd = context.HoaDon.Select(r => new DanhSachHoaDon

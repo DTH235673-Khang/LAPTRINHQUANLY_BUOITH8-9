@@ -47,6 +47,7 @@
             btnThoat = new Button();
             btnSua = new Button();
             btnXoa = new Button();
+            helpProvider1 = new HelpProvider();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
@@ -263,5 +264,6 @@
         private Button btnTimKiem;
         private Button btnXuat;
         private Button btnNhap;
+        private HelpProvider helpProvider1;
     }
 }

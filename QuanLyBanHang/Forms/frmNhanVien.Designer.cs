@@ -178,7 +178,7 @@
             groupBox1.Size = new Size(878, 140);
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
-            groupBox1.Text = "\\";
+            groupBox1.Text = "Thông tin nhân viên";
             // 
             // cboQuyenHan
             // 

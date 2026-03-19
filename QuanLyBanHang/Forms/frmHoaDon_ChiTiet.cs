@@ -61,6 +61,8 @@ namespace QuanLyBanHang.Forms
 
         private void frmHoaDon_ChiTiet_Load(object sender, EventArgs e)
         {
+            helpProvider1.HelpNamespace = "HuongDanSuDung/nhanvien.html";
+            helpProvider1.SetShowHelp(this, true);
             LayNhanVienVaoComboBox();
             LayKhachHangVaoComboBox();
             LaySanPhamVaoComboBox();
