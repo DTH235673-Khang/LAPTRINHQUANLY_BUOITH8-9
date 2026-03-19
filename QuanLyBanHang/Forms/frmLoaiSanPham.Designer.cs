@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnXuat = new Button();
             btnNhap = new Button();
             btnThoat = new Button();
             btnHuyBo = new Button();
@@ -42,7 +43,6 @@
             dataGridView = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
             TenLoai = new DataGridViewTextBoxColumn();
-            btnXuat = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
@@ -50,6 +50,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             groupBox1.Controls.Add(btnXuat);
             groupBox1.Controls.Add(btnNhap);
             groupBox1.Controls.Add(btnThoat);
@@ -66,6 +67,16 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin loại sản phẩm";
+            // 
+            // btnXuat
+            // 
+            btnXuat.Location = new Point(573, 55);
+            btnXuat.Name = "btnXuat";
+            btnXuat.Size = new Size(75, 23);
+            btnXuat.TabIndex = 9;
+            btnXuat.Text = "Xuất";
+            btnXuat.UseVisualStyleBackColor = true;
+            btnXuat.Click += btnXuat_Click;
             // 
             // btnNhap
             // 
@@ -157,6 +168,7 @@
             // 
             // groupBox2
             // 
+            groupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             groupBox2.Controls.Add(dataGridView);
             groupBox2.Location = new Point(15, 116);
             groupBox2.Name = "groupBox2";
@@ -190,16 +202,6 @@
             TenLoai.DataPropertyName = "TenLoai";
             TenLoai.HeaderText = "Tên loại sản phẩm";
             TenLoai.Name = "TenLoai";
-            // 
-            // btnXuat
-            // 
-            btnXuat.Location = new Point(573, 55);
-            btnXuat.Name = "btnXuat";
-            btnXuat.Size = new Size(75, 23);
-            btnXuat.TabIndex = 9;
-            btnXuat.Text = "Xuất";
-            btnXuat.UseVisualStyleBackColor = true;
-            btnXuat.Click += btnXuat_Click;
             // 
             // frmLoaiSanPham
             // 

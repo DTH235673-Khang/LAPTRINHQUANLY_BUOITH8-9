@@ -32,6 +32,7 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             groupBox1 = new GroupBox();
+            btnNhap = new Button();
             dataGridView = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
             HoVaTenNhanVien = new DataGridViewTextBoxColumn();
@@ -39,44 +40,61 @@
             NgayLap = new DataGridViewTextBoxColumn();
             TongTienHoaDon = new DataGridViewTextBoxColumn();
             XemChiTiet = new DataGridViewLinkColumn();
+            btnXuat = new Button();
             btnLapHoaDon = new Button();
+            btnTimKiem = new Button();
             btnInHoaDon = new Button();
+            btnThoat = new Button();
             btnSua = new Button();
             btnXoa = new Button();
-            btnThoat = new Button();
-            btnTimKiem = new Button();
-            btnXuat = new Button();
-            btnNhap = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox1.Controls.Add(btnNhap);
             groupBox1.Controls.Add(dataGridView);
-            groupBox1.Location = new Point(7, 11);
-            groupBox1.Margin = new Padding(3, 4, 3, 4);
+            groupBox1.Controls.Add(btnXuat);
+            groupBox1.Controls.Add(btnLapHoaDon);
+            groupBox1.Controls.Add(btnTimKiem);
+            groupBox1.Controls.Add(btnInHoaDon);
+            groupBox1.Controls.Add(btnThoat);
+            groupBox1.Controls.Add(btnSua);
+            groupBox1.Controls.Add(btnXoa);
+            groupBox1.Location = new Point(6, 8);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(1111, 312);
+            groupBox1.Size = new Size(972, 316);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Danh sách hóa đơn";
+            // 
+            // btnNhap
+            // 
+            btnNhap.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnNhap.ForeColor = Color.Black;
+            btnNhap.Location = new Point(802, 264);
+            btnNhap.Name = "btnNhap";
+            btnNhap.Size = new Size(117, 28);
+            btnNhap.TabIndex = 8;
+            btnNhap.Text = "Nhập";
+            btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnNhap_Click;
             // 
             // dataGridView
             // 
             dataGridView.AllowUserToAddRows = false;
             dataGridView.AllowUserToDeleteRows = false;
+            dataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView.Columns.AddRange(new DataGridViewColumn[] { ID, HoVaTenNhanVien, HoVaTenKhachHang, NgayLap, TongTienHoaDon, XemChiTiet });
-            dataGridView.Dock = DockStyle.Fill;
-            dataGridView.Location = new Point(3, 24);
-            dataGridView.Margin = new Padding(3, 4, 3, 4);
+            dataGridView.Location = new Point(3, 19);
             dataGridView.MultiSelect = false;
             dataGridView.Name = "dataGridView";
             dataGridView.RowHeadersWidth = 51;
-            dataGridView.Size = new Size(1105, 284);
+            dataGridView.Size = new Size(966, 213);
             dataGridView.TabIndex = 0;
             // 
             // ID
@@ -130,39 +148,72 @@
             XemChiTiet.MinimumWidth = 6;
             XemChiTiet.Name = "XemChiTiet";
             // 
+            // btnXuat
+            // 
+            btnXuat.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnXuat.ForeColor = Color.Black;
+            btnXuat.Location = new Point(679, 264);
+            btnXuat.Name = "btnXuat";
+            btnXuat.Size = new Size(117, 28);
+            btnXuat.TabIndex = 7;
+            btnXuat.Text = "Xuất Excel...";
+            btnXuat.UseVisualStyleBackColor = true;
+            btnXuat.Click += btnXuat_Click;
+            // 
             // btnLapHoaDon
             // 
             btnLapHoaDon.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLapHoaDon.ForeColor = Color.Blue;
-            btnLapHoaDon.Location = new Point(87, 344);
-            btnLapHoaDon.Margin = new Padding(3, 4, 3, 4);
+            btnLapHoaDon.Location = new Point(63, 264);
             btnLapHoaDon.Name = "btnLapHoaDon";
-            btnLapHoaDon.Size = new Size(169, 37);
+            btnLapHoaDon.Size = new Size(148, 28);
             btnLapHoaDon.TabIndex = 1;
             btnLapHoaDon.Text = "Lập hóa đơn mới...";
             btnLapHoaDon.UseVisualStyleBackColor = true;
             btnLapHoaDon.Click += btnLapHoaDon_Click;
             // 
+            // btnTimKiem
+            // 
+            btnTimKiem.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnTimKiem.ForeColor = Color.Black;
+            btnTimKiem.Location = new Point(567, 264);
+            btnTimKiem.Name = "btnTimKiem";
+            btnTimKiem.Size = new Size(106, 28);
+            btnTimKiem.TabIndex = 6;
+            btnTimKiem.Text = "Tìm kiếm...";
+            btnTimKiem.UseVisualStyleBackColor = true;
+            // 
             // btnInHoaDon
             // 
             btnInHoaDon.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnInHoaDon.ForeColor = Color.Black;
-            btnInHoaDon.Location = new Point(263, 344);
-            btnInHoaDon.Margin = new Padding(3, 4, 3, 4);
+            btnInHoaDon.Location = new Point(227, 264);
             btnInHoaDon.Name = "btnInHoaDon";
-            btnInHoaDon.Size = new Size(122, 37);
+            btnInHoaDon.Size = new Size(107, 28);
             btnInHoaDon.TabIndex = 2;
             btnInHoaDon.Text = "In hóa đơn...";
             btnInHoaDon.UseVisualStyleBackColor = true;
+            btnInHoaDon.Click += btnInHoaDon_Click;
+            // 
+            // btnThoat
+            // 
+            btnThoat.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnThoat.ForeColor = Color.Black;
+            btnThoat.Location = new Point(489, 264);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(72, 28);
+            btnThoat.TabIndex = 5;
+            btnThoat.Text = "Thoát";
+            btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
             // btnSua
             // 
             btnSua.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSua.ForeColor = Color.Black;
-            btnSua.Location = new Point(392, 344);
-            btnSua.Margin = new Padding(3, 4, 3, 4);
+            btnSua.Location = new Point(340, 264);
             btnSua.Name = "btnSua";
-            btnSua.Size = new Size(82, 37);
+            btnSua.Size = new Size(72, 28);
             btnSua.TabIndex = 3;
             btnSua.Text = "Sửa...";
             btnSua.UseVisualStyleBackColor = true;
@@ -172,81 +223,20 @@
             // 
             btnXoa.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnXoa.ForeColor = Color.Red;
-            btnXoa.Location = new Point(481, 344);
-            btnXoa.Margin = new Padding(3, 4, 3, 4);
+            btnXoa.Location = new Point(418, 264);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(74, 37);
+            btnXoa.Size = new Size(65, 28);
             btnXoa.TabIndex = 4;
             btnXoa.Text = "Xóa";
             btnXoa.UseVisualStyleBackColor = true;
             btnXoa.Click += btnXoa_Click;
             // 
-            // btnThoat
-            // 
-            btnThoat.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnThoat.ForeColor = Color.Black;
-            btnThoat.Location = new Point(562, 344);
-            btnThoat.Margin = new Padding(3, 4, 3, 4);
-            btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(82, 37);
-            btnThoat.TabIndex = 5;
-            btnThoat.Text = "Thoát";
-            btnThoat.UseVisualStyleBackColor = true;
-            btnThoat.Click += btnThoat_Click;
-            // 
-            // btnTimKiem
-            // 
-            btnTimKiem.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnTimKiem.ForeColor = Color.Black;
-            btnTimKiem.Location = new Point(651, 344);
-            btnTimKiem.Margin = new Padding(3, 4, 3, 4);
-            btnTimKiem.Name = "btnTimKiem";
-            btnTimKiem.Size = new Size(121, 37);
-            btnTimKiem.TabIndex = 6;
-            btnTimKiem.Text = "Tìm kiếm...";
-            btnTimKiem.UseVisualStyleBackColor = true;
-            // 
-            // btnXuat
-            // 
-            btnXuat.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnXuat.ForeColor = Color.Black;
-            btnXuat.Location = new Point(779, 344);
-            btnXuat.Margin = new Padding(3, 4, 3, 4);
-            btnXuat.Name = "btnXuat";
-            btnXuat.Size = new Size(134, 37);
-            btnXuat.TabIndex = 7;
-            btnXuat.Text = "Xuất Excel...";
-            btnXuat.UseVisualStyleBackColor = true;
-            btnXuat.Click += btnXuat_Click;
-            // 
-            // btnNhap
-            // 
-            btnNhap.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnNhap.ForeColor = Color.Black;
-            btnNhap.Location = new Point(920, 344);
-            btnNhap.Margin = new Padding(3, 4, 3, 4);
-            btnNhap.Name = "btnNhap";
-            btnNhap.Size = new Size(134, 37);
-            btnNhap.TabIndex = 8;
-            btnNhap.Text = "Nhập";
-            btnNhap.UseVisualStyleBackColor = true;
-            btnNhap.Click += btnNhap_Click;
-            // 
             // frmHoaDon
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1131, 409);
-            Controls.Add(btnNhap);
-            Controls.Add(btnXuat);
-            Controls.Add(btnTimKiem);
-            Controls.Add(btnThoat);
-            Controls.Add(btnXoa);
-            Controls.Add(btnSua);
-            Controls.Add(btnInHoaDon);
-            Controls.Add(btnLapHoaDon);
+            ClientSize = new Size(990, 327);
             Controls.Add(groupBox1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmHoaDon";
             Text = "Hóa Đơn";
             Load += frmHoaDon_Load;

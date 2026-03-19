@@ -10,6 +10,8 @@
   </PropertyGroup>
   
   
+  
+  
 
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Interop.Excel">
@@ -24,6 +26,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Images\no-image.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Reports\rptThongKeDoanhThu.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

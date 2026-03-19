@@ -9,7 +9,7 @@ namespace QuanLyBanHang.Forms
         QLBHDbContext context = new QLBHDbContext();  // Khởi tạo biến ngữ cảnh CSDL
         bool xuLyThem = false;  // Kiểm tra có nhấn vào nút Thêm hay không?
         int id;  // Lấy mã sản phẩm (dùng cho Sửa và Xóa)
-        string imagesFolder = Application.StartupPath.Replace("bin\\Debug\\net5.0-windows", "Images");
+        string imagesFolder = Application.StartupPath.Replace("bin\\Debug\\net8.0-windows", "Images");
         public frmSanPham()
         {
             InitializeComponent();

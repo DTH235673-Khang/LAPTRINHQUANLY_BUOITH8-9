@@ -1,6 +1,7 @@
 ﻿using ClosedXML.Excel;
 using Microsoft.IdentityModel.Tokens;
 using QuanLyBanHang.Data;
+using QuanLyBanHang.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,7 +36,7 @@ namespace QuanLyBanHang.Forms
                 HoVaTenKhachHang = r.KhachHang.HoVaTen,
                 NgayLap = r.NgayLap,
                 GhiChuHoaDon = r.GhiChuHoaDon,
-                TongTienHoaDon = r.TongTienHoaDon,
+                TongTienHoaDon = r.HoaDonChiTiet.Sum(r => r.SoLuongBan * r.DonGiaBan),
                 XemChiTiet = "Xem chi tiết"
             }).ToList();
             dataGridView.DataSource = hd;
@@ -216,8 +217,8 @@ namespace QuanLyBanHang.Forms
                         foreach (var p in dsHoaDon)
                         {
                             var nv = context.NhanVien.FirstOrDefault(r => r.ID == p.NhanVienID);
-                            var kh=context.KhachHang.FirstOrDefault(r => r.ID==p.KhachHangID);
-                            tableHD.Rows.Add(p.ID,nv.HoVaTen, kh.HoVaTen, p.NgayLap, p.GhiChuHoaDon,p.TongTienHoaDon);
+                            var kh = context.KhachHang.FirstOrDefault(r => r.ID == p.KhachHangID);
+                            tableHD.Rows.Add(p.ID, nv.HoVaTen, kh.HoVaTen, p.NgayLap, p.GhiChuHoaDon, p.TongTienHoaDon);
                         }
                     }
 
@@ -261,6 +262,15 @@ namespace QuanLyBanHang.Forms
                 }
             }
         }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            id = Convert.ToInt32(dataGridView.CurrentRow.Cells["ID"].Value.ToString());
+            using (frmInHoaDon inHoaDon = new frmInHoaDon(id))
+            {
+                inHoaDon.ShowDialog();
+            }
+        }
     }
-    }
+}
 
